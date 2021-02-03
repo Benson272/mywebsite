@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="energy.css">
+        <script src="energy.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <section id="loadingScreen">
+            <div class="door" id="leftDoor"></div>
+            <div class="door" id="rightDoor"></div>
+            <div id="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        
+        <section id="welcome">
+            <div id="container">
+                <canvas id="canvas"></canvas>
+
+                <svg id="bg-wave"viewbox="0 0 1440 150">
+                    <defs>
+                        <linearGradient id="gradient">
+                            <stop  stop-color="#7cff75" offset="0%"/>
+                            <stop  stop-color="#bcff70" offset="100%"/>
+                          </linearGradient>
+    
+                    </defs>
+                    <path fill="url(#gradient)">
+                      <animate 
+                        attributeName="d" 
+                        dur="10000ms" 
+                        repeatCount="indefinite"
+                        
+                                  
+                        values="
+                        M 0 100 L 0 100 C 500 0 940 150 1440 50 L 1440 150 L 0 150 Z;
+                        M 0 100 L 0 100 C 500 150 940 1 1440 50 L 1440 150 L 0 150 Z;
+                        M 0 100 L 0 100 C 500 0 940 150 1440 50 L 1440 150 L 0 150 Z;
+                        "
+
+                        keyTimes="0; 0.5; 1"
+                              />
+                    </path>
+                </svg>
+
+                
+                
+
+                <svg id="cycleTextContainer">
+                    <defs>
+                        <linearGradient id="gradient">
+                            <stop  stop-color="#7cff75" offset="0%"/>
+                            <stop  stop-color="#bcff70" offset="100%"/>
+                          </linearGradient>
+
+                          <linearGradient id="gradient2">
+                            <stop  stop-color="#fff" offset="0%"/>
+                            <stop  stop-color="#fff" offset="100%"/>
+                          </linearGradient>
+    
+                    </defs>
+                    <text y="50%" class="cycleText upper" id="heading" fill="url('#gradient2')">learn, practice, create, improve</text>
+                </svg>
+
+                
+            </div>
+            <!-- <p  class="cycleText upper" id="heading">learn, practice, create, imrpove</p> -->
+            <p class="typingText" id="author">Hello! I'm Benson Vuong and I strive to create technology people enjoy using.</p>
+        </section>
+
+        <section class="codeBubble">
+            <div id="shadow">
+                <div class="banner">
+                    <div>
+                        <h1 class="upper">Creating for the future, one code at a time.</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <svg id="slant" viewbox="0 0 300 10">
+                <polygon points="0,0 300,10, 0,10" style="fill:rgb(140, 242, 255)"></polygon>
+            </svg>
+            
+            <div class="bubble language" id = "python" >
+                <p>Python</p>
+            </div>
+
+            <div class="bubble language" id = "java" >
+                <p>Java</p>
+            </div>
+
+            <div class="bubble language" id = "javascript" >
+                <p>Javascript</p>
+            </div>
+
+            <div class="bubble language" id = "cpp" >
+                <p>C++</p>
+            </div>
+
+            <div class="bubble framework" id="django">
+                <p>Django</p>
+            </div>
+
+            <div class="bubble framework" id="nodejs">
+                <p>Nodejs</p>
+            </div>
+
+            <div class="bubble framework" id="mongodb">
+                <p>MongoDB</p>
+            </div>
+
+            <div class="bubble framework" id="html">
+                <p>HTML</p>
+            </div>
+
+            <div class="bubble framework" id="css">
+                <p>CSS</p>
+            </div>
+
+        </section>
+
+        <section id="passionSection">
+            <div>
+                <h1>My Passion is Creating</h1>
+                <p>My goal in life is to create new technology that proves useful to others, no matter how niche it may be. I'm passionate about creating with purpose. As long as I'm able to make someone's life a little bit easier thorugh code, I will gladly take that oppurtunity!</p>
+            </div>
+        </section>
+
+        <section id="experienceSection">
+            <div id="experienceBackground"></div>
+
+            <div id="selection">
+                <p id='experience'>Experiences</p>
+                <p id='project'>Personal Projects</p>
+            </div>
+
+            <div id="selectionCopy">
+                <p id='experienceCopy'>Experiences</p>
+                <p id='projectCopy'>Personal Projects</p>
+            </div>
+
+            <div id="experienceContainer">
+                <div class="card">
+                    <h2>Triton Software Engineers (developer)</h2>
+                    <a href="https://tse.ucsd.edu/" target = "_blank">
+                        <div class="hoverCard">
+                            <p>Used react native + typescript to develop mobile application that tracks user well being and rewards good practices.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <h2>Software Development Class (developer)</h2>
+                    <a href="https://www.youtube.com/watch?v=AetrEdn_Tm4&feature=youtu.be" target = "_blank"></a>
+                        <div class="hoverCard">
+                            <p>Used react + flask + postgres to create a website that connects to a UCSD's student account to automatically generate a dynamic four year plan with draggable classes</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <h2>ACM Bit Byte Program (mentor)</h2>
+                    <a href="https://acmucsd.com/" target = "_blank">
+                        <div class="hoverCard">
+                            <p>Became a mentor for incoming computer science majors and acted as a guide and answered any questions they had.</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <h2>UCSD Chancellor Scholar (webmaster)</h2>
+                    <a href="https://chancellorsscholarsalliance.ucsd.edu/index.html" target = "_blank">
+                        <div class="hoverCard">
+                            <p>Maintain and update the official Chancellor Scholars webpage</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- <div class="break"></div> -->
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="moreExperience">
+                      <div class="flip-card-front">
+                        <h2>And more to come!</h2>
+                      </div>
+                      <div class="flip-card-back">
+                        <h2>You or your company could be next!</h2>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div id="projectContainer">
+                <div class="card">
+                    <h2>Todo List + WebPush Notifications</h2>
+                    <a href="https://online-list.herokuapp.com/todo" target = "_blank">
+                        <div class="hoverCard">
+                            <p>A simple list creating application with a login system and the ability to schedule notifications to be sent to your desktop. </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <h2>MyAnimeList Song search and Downlaod</h2>
+                    <a >
+                        <div class="hoverCard">
+                            <p>A python script using MAL's API along with youtube's API to get a user's watch list and automatically save songs from youtube. (link coming soon)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="break"></div>
+                <div class="card">
+                    <h2>Online Codenames</h2>
+                    <a href="http://online-codegames.herokuapp.com/" target = "_blank">
+                        <div class="hoverCard">
+                            <p>A basic webpage that allows users to play the popular board game Codenames through the use of web sockets.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <h2>My first website</h2>
+                    <a href="https://benson272.github.io/first-website/home/index.html" target = "_blank">
+                        <div class="hoverCard">
+                            <p>A website I made when I first started learning html, css, javascript. A few of the webpages are incokplete as they were only meant for practice/ proof of concept</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+            
+        <section  id="contact">
+            <p>Feel free to get in contact with me at <br><a id="email" href="mailto:bensonvuong275@gmail.com">bensonvuong275@gmail.com</a> or check out my <a href="https://www.linkedin.com/in/benson-vuong/" target="_blank">Linkedin</a></p>
+        </section>
+    </body>
+</html>

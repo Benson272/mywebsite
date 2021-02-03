@@ -1,0 +1,748 @@
+:root {
+    --purple: rgb(116, 91, 255);
+    --dark-blue: rgb(14, 122, 255);
+    --blue: rgba(108, 174, 254, 1);
+    --skyblue: rgba(160, 207, 255,1);
+    --light-blue: rgba(237, 246, 255, 1);
+    --background: rgba(255, 255, 255, 1);
+    --brown: rgba(185, 115, 47, 1);
+    --bright-green: rgb(168, 255, 243);
+}
+@font-face{
+    font-family: Ubuntu;
+    src: url("./Ubuntu-Bold.ttf");
+}
+
+
+html, body{
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    }
+
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    width:100%;
+    height:100%;
+    min-height:2000px;
+    overflow-x: hidden;
+    background-color:var(--background);
+}
+#container{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background-color:var(--dark-blue);
+    background-image: linear-gradient(45deg, var(--dark-blue), var(--blue), var(--bright-green));
+    position:relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#bg-wave {
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    transition: clip-path 2s;
+}
+
+#test_image {
+    clip-path: url(#wave-clip);
+    animation: wave 2s infinite alternate ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        clip-path: url(#wave-clip);
+    }
+    100% {
+        clip-path: url(#wave-clip-2);
+    }
+}
+
+.string {
+    position:absolute;
+    top:0px;
+}
+
+#welcome{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0px;
+}
+
+#canvas{
+    position:absolute;
+    display:none;
+}
+
+img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    
+}
+
+#video{
+    width:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+    z-index:1;
+    
+}
+
+.upper{
+    text-transform: uppercase;
+}
+
+#heading, #author, #cycleTextContainer{
+    color:white;
+    font-family:Arial;
+    font-weight:1000;
+    z-index:10;
+    border:0px;
+    display:block;
+    text-align:left;
+    position:absolute;
+    top:30%;
+    padding:0 10%;
+}
+
+#author{
+    top:45%;
+    font-size:2rem;
+    text-shadow:none;
+    color:rgb(255, 255, 255);
+}
+
+
+#heading {
+    font-size: 4rem;
+}
+
+#cycleTextContainer {
+    margin-bottom:10px;
+    width:450px;
+    height:100px;
+}
+
+.codeBubble {
+    background-image:linear-gradient(to right,#7cff75,#bcff70);
+    position:relative;
+}
+
+#slant {
+    position:absolute;
+    bottom:0;
+}
+
+#shadow {
+    filter: drop-shadow(0px 0px 50px rgb(52, 204, 255));
+}
+.banner {
+    background-image: url("./sampleCodeWhite.PNG");
+    width:100%;
+    height:110vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    clip-path:circle(20% at 50% 40%);
+    
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #056dff, #07c5ff);
+    opacity: .9;
+    z-index:1;
+}
+
+.banner div {
+    position:relative;
+    z-index:2;
+    top:20%;
+    left:30%;
+    width:40%;
+    height:40%;
+}
+.banner div h1 {
+    font-size:2rem;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    font-family:"Ubuntu";
+    font-weight:1000;
+    width:75%;
+}
+
+.bubble {
+    border-radius: 50%;
+    
+    position:absolute;
+    font-family: Ubuntu;
+}
+
+.bubble p{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.language {
+    width:15%;
+    height:150px;
+    max-width:175px;
+    max-height:175px;
+    min-width:110px;
+    min-height: 110px;
+    background-color:#FA97DF;
+    border:5px dashed #d682c0;
+}
+
+.language p {
+    font-size:1.4rem;
+}
+.framework {
+    width:10%;
+    height:100px;
+    max-width:125px;
+    max-height:125px;
+    min-width:80px;
+    min-height:80px;
+    background-color:#FA8F85;
+    border:5px dashed #cc736b;
+}
+
+#python {
+    top: 20%;
+    left:5%;
+}
+
+#java {
+    top: 5%;
+    left:70%;
+}
+
+#javascript {
+    top: 55%;
+    left:80%;
+}
+
+#cpp {
+    top: 70%;
+    left:25%;
+}
+
+#django {
+    top: 75%;
+    left: 60%;
+}
+
+#nodejs {
+    top: 47.5%;
+    left: 18%;
+}
+
+#mongodb {
+    top: 35%;
+    left: 80%;
+}
+
+#html {
+    top: 5%;
+    left: 25%;
+}
+
+#css {
+    top: 67.5%;
+    left: 5%;
+}
+
+#passionSection{
+    min-height:700px;
+    height:700px;
+    width:100%;
+    position:relative;
+    top:-100px;
+    pointer-events: none;
+    
+}
+
+#passionSection div{
+    position:relative;
+    height:100%;
+    width:90%;
+    padding:5%;
+    background-color:rgb(140, 242, 255);
+    z-index:-5;
+    pointer-events: none;
+}
+
+#passionSection h1{
+    margin-top:225px;
+    font-size:2.5rem;
+    font-family:Ubuntu;
+    margin-bottom:50px;
+    /* position:absolute;
+    top:30%; */
+    pointer-events: none;
+    width:90%;
+    margin:225px auto 50px;
+}
+#passionSection p {
+    font-size:1.8rem;
+    font-family:Ubuntu;
+    /* position:absolute;
+    top:45%; */
+    line-height:2.5rem;
+    width:90%;
+    z-index:120;
+    pointer-events: none;
+    width:90%;
+    margin:auto;
+}
+
+#experienceSection {
+    position:relative;
+}
+
+#selection, #selectionCopy {
+    position:absolute;
+    top: 200px;
+    left:50%;
+    transform: translateX(-50%);
+    text-align:center;
+    z-index:3;
+    margin-bottom:30px;
+    background-color: rgb(63, 189, 74);
+    background-image: linear-gradient(to right, rgb(67, 224, 80), rgb(67, 246, 252) 60%);
+    display:inline-block;
+    clip-path: inset(0% 60% 0% 0% round 15px);
+    transition:1s;
+}
+
+#selectionCopy {
+    background-color:transparent;
+    background-image:none;
+    color:white;
+    z-index:2;
+    clip-path:none;
+    border-radius:15px;
+    background-color:rgb(158, 116, 197);
+}
+
+#selection p, #selectionCopy p {
+    cursor:pointer;
+    display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.2rem;
+    font-weight:bold;
+    margin:0px 10px;
+    padding:20px;
+    border-radius:15px;
+}
+
+
+
+#experienceBackground {
+    background-color:rgb(255, 204, 255);
+    min-height:1100px;
+    width:100%;
+    height:500px;
+    position:relative;
+    transform: skewY(-3deg);
+    z-index:2;
+    top:-50px;
+}
+
+#experienceContainer, #projectContainer {
+    position:absolute;
+    top:300px;
+    width:100%;
+    text-align: center;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition:1s;
+}
+
+#projectContainer {
+    opacity:0;
+    z-index:-1;
+}
+
+.flip-card {
+    display:inline-block;
+    margin:20px;
+    position:relative;
+}
+
+.card, .flip-card-inner {
+    display:inline-block;
+    background-color:rgb(116, 204, 255);
+    background-image: linear-gradient(120deg,  rgb(112, 150, 255), rgb(116, 204, 255));
+    border-radius:15px;
+    box-shadow: 5px 5px 8px rgb(177, 177, 177);
+    width:30%;
+    height:200px;
+    min-height:150px;
+    min-width: 300px;
+    max-width:400px;
+    margin:20px;
+    z-index:10;
+    position:relative;
+    transition:0.25s;
+}
+
+#projectContainer .card{
+    background-image: linear-gradient(120deg,  rgb(255, 91, 91), rgb(255, 155, 155));
+}
+
+.card a {
+    color:black;
+}
+
+.card h2, .flip-card-front h2, .flip-card-back h2 {
+    text-align: center;
+    font-family:Ubuntu;
+    position:relative;
+    top:50%;
+    left:50%;
+    width:80%;
+    transform: translate(-50%,-50%);
+}
+
+.hoverCard, .hoverCardLast {
+    border-radius:15px;
+    background-color:rgb(255, 91, 91);
+    background-image:linear-gradient(rgb(255, 109, 109), rgb(255, 156, 138));
+    width:100%;
+    height:100%;
+    clip-path:circle(15px at 25px 25px);
+    transition:0.5s;
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+
+#projectContainer .hoverCard {
+    background-image:linear-gradient(rgb(109, 160, 255), rgb(138, 212, 255));
+}
+
+.hoverCard p{
+    font-family: Ubuntu;
+    font-size:1.2rem;
+    padding:0px 25px;
+    text-align:center;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.hoverCardLast {
+    clip-path: inset(50% 50% 50% 50% round 15px);
+    background-color:greenyellow;
+}
+
+#moreExperience:hover .hoverCardLast{
+    clip-path: inset(-20% -20% -20% -20%);
+}
+
+.break {
+    flex-basis: 100%;
+    height:0;
+}
+
+.card:hover .hoverCard{
+    clip-path:circle(500px at 20px 20px);
+    background-color:orange;
+}
+
+/*code for flip card from w3schools*/
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 30%;
+    min-width: 300px;
+    max-width:400px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+    margin:0px;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgb(112, 150, 255);
+    background-image: linear-gradient(120deg, rgb(112, 150, 255), rgb(116, 204, 255));
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    background-image: linear-gradient(120deg, rgb(112, 150, 255), rgb(116, 204, 255));
+    transform: rotateY(180deg);
+  }
+
+
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    font-size:1.8rem;
+    font-family:Ubuntu;
+    color:black;
+    width:100%;
+    padding:150px 0px 50px 0px;
+    line-height:4rem;
+}
+
+#contact a{
+    color:rgb(88, 187, 248);
+    text-decoration: none;
+}
+
+
+
+#loadingScreen{
+    width:100vw;
+    height:100vh;
+}
+
+.door{
+    background-color:rgb(0, 107, 179);
+    width:50%;
+    height:100%;
+    z-index:20;
+    position:fixed;
+    opacity:1;
+    transition: ease-in-out 1.75s, opacity 1.5s;
+}
+
+#leftDoor{
+    left:0%;
+    
+}
+#rightDoor{
+    right:0%;
+    
+}
+
+#loader{
+    background:linear-gradient(#b0efff,#b0ffe5,#bcffb0,#f6ffb0,#ffd8b0,#ffb7b0);
+    position:fixed;
+    width:200px;
+    height:200px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:20;
+    border-radius:50%;
+    animation: spin linear 0.5s infinite;
+    transition: ease-in-out 1.75s, opacity 1.5s;
+}
+
+#loader span{
+    content:"";
+    background:linear-gradient(#b0efff,#b0ffe5,#bcffb0,#f6ffb0,#ffd8b0,#ffb7b0);
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:20;
+    border-radius:50%;
+}
+
+#loader span:nth-child(1){
+    filter:blur(5px);
+}
+#loader span:nth-child(2){
+    filter:blur(10px);
+}
+#loader span:nth-child(3){
+    filter:blur(25px);
+}
+#loader span:nth-child(4){
+    filter:blur(50px);
+}
+
+#loader::after{
+    content:"";
+    border-radius:50%;
+    position:fixed;
+    filter: blur(1px);
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:85%;
+    height:85%;
+    background:rgb(0, 107, 179);
+    z-index:21;
+    display:block;
+}
+
+@keyframes spin{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 816px) {
+    /* For selection experience: */
+    #selection{
+        clip-path: inset(0% 10% 50% 10% round 15px);
+        background-image: linear-gradient(to bottom, rgb(67, 224, 80), rgb(67, 246, 252) 60%);
+        top:150px;
+    }
+    #selectionCopy {
+        clip-path: inset(0% 10% 0% 10% round 15px);
+        top:150px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones + tablets: */
+    #heading, #author {
+        text-align: center;
+    }
+    #heading, #cycleTextContainer {
+        font-size:3rem;
+        padding:0;
+        width:100%;
+    }
+
+    .banner div h1 {
+        font-size:1.75rem;
+        width:85%;
+    }
+
+    #experienceBackground{
+        min-height:1700px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* For mobile phones: */
+    #cycleTextContainer {
+        top:15%;
+    }
+    #author {
+        top:30%;
+    }
+
+    .banner div {
+        width:80%;
+        left:10%;
+    }
+
+    .banner div h1 {
+        font-size:1.4rem;
+        width:70%;
+    }
+
+    #python {
+        top: 8%;
+        left:5%;
+    }
+    
+    #java {
+        top: 0%;
+        left:60%;
+    }
+    
+    #javascript {
+        top: 70%;
+        left: 62.5%;
+    }
+    
+    #cpp {
+        top: 60%;
+        left:15%;
+    }
+
+    #django {
+        display:none;
+    }
+    
+    #nodejs {
+        display:none;
+    }
+    
+    #mongodb {
+        display:none;
+    }
+    
+    #html {
+        display:none;
+    }
+    
+    #css {
+        display:none;
+    }
+    #experienceBackground{
+        min-height:1800px;
+    }
+
+    #passionSection h1{
+        font-size:1.5rem;
+        top:30%;
+        
+    }
+    #passionSection p {
+        font-size:1.2rem;
+        top:45%;
+        
+    }
+    #experienceBackground {
+        top:-100px;
+    }
+}
+
+
